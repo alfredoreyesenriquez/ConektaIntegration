@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pagos con tarjeta</title>
+</head>
+<body>
+    <form action="" method="POST" id="card-form">
+        <span class="card-errors"></span>
+        <div>
+          <label>
+            <span>Nombre del tarjetahabiente</span>
+            <input type="text" size="20" data-conekta="card[name]" value="Luis Alfredo Reyes Enriquez">
+          </label>
+        </div>
+        <div>
+          <label>
+            <span>Número de tarjeta de crédito</span>
+            <input type="text" size="20" data-conekta="card[number]" value="4242424242424242">
+          </label>
+        </div>
+        <div>
+          <label>
+            <span>CVC</span>
+            <input type="text" size="4" data-conekta="card[cvc]" value="236">
+          </label>
+        </div>
+        <div>
+          <label>
+            <span>Fecha de expiración (MM/AAAA)</span>
+            <input type="text" size="2" data-conekta="card[exp_month]" value="11">
+          </label>
+          <span>/</span>
+          <input type="text" size="4" data-conekta="card[exp_year]" value="21">
+        </div>
+        <button id="crearToken">Hacer cargo</button>
+    </form>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.conekta.io/js/latest/conekta.js"></script>
+    <script src="js/conekta.js"></script>
+</body>
+</html>
